@@ -27,13 +27,6 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     JwtTokenUtils jwtTokenUtils;
 
-    @Autowired
-    KakaoTokenUtils kakaoTokenUtils;
-    @Autowired
-    GoogleTokenUtils googleTokenUtils;
-//    @Autowired
-//    NaverTokenUtils naverTokenUtils;
-
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         JwtAuthenticationToken beforeToken = (JwtAuthenticationToken) authentication;
