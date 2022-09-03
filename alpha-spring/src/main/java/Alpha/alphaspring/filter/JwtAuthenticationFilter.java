@@ -32,15 +32,6 @@ public class JwtAuthenticationFilter extends GenericFilterBean {
     final String AUTH_HEADER_NAME = "Authorization";
     final String BEARER_NAME = "Bearer";
     private final AuthenticationManager authenticationManager;
-
-//    @Override
-//    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-//        List<String> excludeUrlPatterns = new ArrayList<>() { "/register" };
-//
-//        return excludeUrlPatterns.stream()
-//                .anyMatch(p -> pathMatcher.match(p, request.getServletPath()));
-//    }
-
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
         System.out.println("Enter Jwt filter");
